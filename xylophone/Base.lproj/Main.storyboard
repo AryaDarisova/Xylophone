@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,187 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="xylophone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7GM-f3-hev">
+                                <rect key="frame" x="0.0" y="53" width="414" height="809"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-CG-FbU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-XL-Mbn">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="107"/>
+                                                <color key="backgroundColor" red="1" green="0.36078431372549019" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Каждый">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QVY-XL-Mbn" secondAttribute="trailing" constant="10" id="BwK-W3-k37"/>
+                                            <constraint firstItem="QVY-XL-Mbn" firstAttribute="top" secondItem="1GW-CG-FbU" secondAttribute="top" id="KTv-OJ-vhe"/>
+                                            <constraint firstAttribute="bottom" secondItem="QVY-XL-Mbn" secondAttribute="bottom" id="OBA-f5-dZc"/>
+                                            <constraint firstItem="QVY-XL-Mbn" firstAttribute="leading" secondItem="1GW-CG-FbU" secondAttribute="leading" constant="10" id="iaO-2a-CPt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfx-dj-oh2">
+                                        <rect key="frame" x="0.0" y="117" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgh-Xm-2pD">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="107"/>
+                                                <color key="backgroundColor" red="1" green="0.58823529411764708" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Охотник">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Dgh-Xm-2pD" firstAttribute="leading" secondItem="lfx-dj-oh2" secondAttribute="leading" constant="20" id="7f5-Xl-fyG"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dgh-Xm-2pD" secondAttribute="bottom" id="HW8-Sy-XiO"/>
+                                            <constraint firstItem="Dgh-Xm-2pD" firstAttribute="top" secondItem="lfx-dj-oh2" secondAttribute="top" id="cIK-ZT-zAW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dgh-Xm-2pD" secondAttribute="trailing" constant="20" id="fVI-9x-laD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRc-ih-KLY">
+                                        <rect key="frame" x="0.0" y="234" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-EP-PKI">
+                                                <rect key="frame" x="30" y="0.0" width="354" height="107"/>
+                                                <color key="backgroundColor" red="1" green="0.80392156862745101" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Желает">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="zXN-EP-PKI" secondAttribute="trailing" constant="30" id="71g-H2-Fqw"/>
+                                            <constraint firstItem="zXN-EP-PKI" firstAttribute="leading" secondItem="BRc-ih-KLY" secondAttribute="leading" constant="30" id="F7T-h1-aQg"/>
+                                            <constraint firstItem="zXN-EP-PKI" firstAttribute="top" secondItem="BRc-ih-KLY" secondAttribute="top" id="FCu-aV-APQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="zXN-EP-PKI" secondAttribute="bottom" id="UtB-Aj-Ouf"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RY-PA-xz1">
+                                        <rect key="frame" x="0.0" y="351" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC2-mD-coP">
+                                                <rect key="frame" x="40" y="0.0" width="334" height="107"/>
+                                                <color key="backgroundColor" red="0.85490196078431369" green="0.84705882352941175" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Знать">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sC2-mD-coP" secondAttribute="trailing" constant="40" id="Bt8-6r-XnL"/>
+                                            <constraint firstAttribute="bottom" secondItem="sC2-mD-coP" secondAttribute="bottom" id="L6w-KH-O5t"/>
+                                            <constraint firstItem="sC2-mD-coP" firstAttribute="top" secondItem="6RY-PA-xz1" secondAttribute="top" id="eAe-VT-TfE"/>
+                                            <constraint firstItem="sC2-mD-coP" firstAttribute="leading" secondItem="6RY-PA-xz1" secondAttribute="leading" constant="40" id="shc-qO-RAE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zd-Le-EYg">
+                                        <rect key="frame" x="0.0" y="468" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZq-Ro-ef0">
+                                                <rect key="frame" x="50" y="0.0" width="314" height="107"/>
+                                                <color key="backgroundColor" red="0.71764705882352942" green="0.81176470588235294" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Где">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="HZq-Ro-ef0" secondAttribute="trailing" constant="50" id="ANY-bw-YUP"/>
+                                            <constraint firstItem="HZq-Ro-ef0" firstAttribute="leading" secondItem="4zd-Le-EYg" secondAttribute="leading" constant="50" id="O2H-77-T6g"/>
+                                            <constraint firstItem="HZq-Ro-ef0" firstAttribute="top" secondItem="4zd-Le-EYg" secondAttribute="top" id="npt-cu-x9a"/>
+                                            <constraint firstAttribute="bottom" secondItem="HZq-Ro-ef0" secondAttribute="bottom" id="ry6-OT-TmZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIT-jH-y8d">
+                                        <rect key="frame" x="0.0" y="585" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-L5-wwF">
+                                                <rect key="frame" x="60" y="0.0" width="294" height="107"/>
+                                                <color key="backgroundColor" red="0.41568627450980389" green="0.6705882352941176" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Сидит">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ast-L5-wwF" secondAttribute="bottom" id="FsQ-A7-LgT"/>
+                                            <constraint firstItem="Ast-L5-wwF" firstAttribute="top" secondItem="IIT-jH-y8d" secondAttribute="top" id="MXX-ja-Px4"/>
+                                            <constraint firstItem="Ast-L5-wwF" firstAttribute="leading" secondItem="IIT-jH-y8d" secondAttribute="leading" constant="60" id="PFi-Vz-fZV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ast-L5-wwF" secondAttribute="trailing" constant="60" id="iA7-J3-5qh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-tu-XHe">
+                                        <rect key="frame" x="0.0" y="702" width="414" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-YC-BK8">
+                                                <rect key="frame" x="70" y="0.0" width="274" height="107"/>
+                                                <color key="backgroundColor" red="0.41176470588235292" green="0.36862745098039218" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Фазан">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="qrr-YC-BK8" secondAttribute="trailing" constant="70" id="NHq-dr-wwC"/>
+                                            <constraint firstAttribute="bottom" secondItem="qrr-YC-BK8" secondAttribute="bottom" id="d01-Yb-LWy"/>
+                                            <constraint firstItem="qrr-YC-BK8" firstAttribute="leading" secondItem="4rf-tu-XHe" secondAttribute="leading" constant="70" id="jTU-eg-Poc"/>
+                                            <constraint firstItem="qrr-YC-BK8" firstAttribute="top" secondItem="4rf-tu-XHe" secondAttribute="top" id="o6M-aN-LiW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4rf-tu-XHe" secondAttribute="trailing" id="2F5-WO-BHN"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zd-Le-EYg" secondAttribute="trailing" id="3Fw-Fc-t97"/>
+                                    <constraint firstAttribute="trailing" secondItem="6RY-PA-xz1" secondAttribute="trailing" id="5dC-i6-f7k"/>
+                                    <constraint firstItem="lfx-dj-oh2" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="K3u-cz-a5i"/>
+                                    <constraint firstItem="BRc-ih-KLY" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="KoI-XS-qnc"/>
+                                    <constraint firstAttribute="trailing" secondItem="IIT-jH-y8d" secondAttribute="trailing" id="PpW-FD-9hh"/>
+                                    <constraint firstAttribute="trailing" secondItem="1GW-CG-FbU" secondAttribute="trailing" id="Psj-VM-u5p"/>
+                                    <constraint firstAttribute="trailing" secondItem="BRc-ih-KLY" secondAttribute="trailing" id="Qjp-YG-e3x"/>
+                                    <constraint firstItem="6RY-PA-xz1" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="dha-eg-trT"/>
+                                    <constraint firstAttribute="trailing" secondItem="lfx-dj-oh2" secondAttribute="trailing" id="die-wm-s8B"/>
+                                    <constraint firstItem="4rf-tu-XHe" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="gIe-d1-df6"/>
+                                    <constraint firstItem="IIT-jH-y8d" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="ia6-om-uhO"/>
+                                    <constraint firstItem="4zd-Le-EYg" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="kiP-ue-Ju3"/>
+                                    <constraint firstItem="1GW-CG-FbU" firstAttribute="leading" secondItem="7GM-f3-hev" secondAttribute="leading" id="kpv-sZ-ksD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7GM-f3-hev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Sj-2b-hPP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7GM-f3-hev" secondAttribute="trailing" id="Ea0-Dd-zTr"/>
+                            <constraint firstItem="7GM-f3-hev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSS-ey-2cL"/>
+                            <constraint firstItem="7GM-f3-hev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="QWJ-dL-Nxe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7GM-f3-hev" secondAttribute="bottom" id="Uh6-Ui-vqn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
         </scene>
     </scenes>
 </document>
